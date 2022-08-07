@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RecoverFragment">
+
+    <TextView
+        android:id="@+id/tv_recover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="150dp"
+        android:text="Восстановление"
+        android:textSize="32dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_recover_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+
+        app:boxBackgroundMode="none"
+        app:hintTextColor="@color/teal_200"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recover">
+
+        <EditText
+            android:id="@+id/et_recover_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:hint="Логин"
+            android:imeOptions="actionDone"
+
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_recover_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+
+        app:boxBackgroundMode="none"
+        app:hintTextColor="@color/teal_200"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recover">
+
+        <EditText
+            android:id="@+id/et_recover_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:hint="Код подтверждения"
+            android:imeOptions="actionDone"
+
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_recover_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="gone"
+
+        app:boxBackgroundMode="none"
+        app:hintTextColor="@color/teal_200"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_recover"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/et_recover_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:hint="Пароль"
+            android:imeOptions="actionDone"
+
+            android:inputType="textPassword"
+            android:paddingTop="4dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_recover_code"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Подтвердить"
+        android:visibility="gone"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_recover_password"
+        app:layout_constraintVertical_bias="0.2"/>
+    <Button
+        android:id="@+id/btn_recover_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Восстановить"
+        android:visibility="gone"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_recover_password"
+        app:layout_constraintVertical_bias="0.2"/>
+    <Button
+        android:id="@+id/btn_recover_send"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Отправить код"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_recover_password"
+        app:layout_constraintVertical_bias="0.2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
